@@ -11,17 +11,20 @@
 
 #include <QPushButton>
 #include <QMainWindow>
-#include <QMdiArea>
 
 #include <ui_q_test.h>
 
 class MainWindowExample : public QMainWindow
 {
-    //Q_OBJECT
+    Q_OBJECT
 public:
     MainWindowExample(QWidget *parent=0);
 
     void onRunClicked();
+
+    void onValueChanged(int i);
+
+    void onSpinboxButtonClicked();
 
 private:
     Ui::MainWindow ui_;

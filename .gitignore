@@ -1,4 +1,6 @@
 .vscode
+
+# ignore all cmake generated files
 CMakeCache.txt
 cmake_install.cmake
 CMakeFiles/
@@ -6,3 +8,4 @@ Makefile
 q_example
 q_example_automoc.cpp
 ui_q_test.h
+moc_*.cpp*

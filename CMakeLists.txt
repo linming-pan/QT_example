@@ -26,10 +26,14 @@ set(q_example_SRCS
     src/main_window_example.cpp
 )
 
-include_directories(${SDL2_INCLUDE_DIRS})
+qt5_wrap_cpp(moc_SRC
+    include/main_window_example.hpp
+)
 
-# Tell CMake to create the helloworld executable
-add_executable(q_example WIN32 ${q_example_SRCS})
+# Tell CMake to create the q_example executable
+add_executable(q_example ${q_example_SRCS}
+    ${moc_SRC}
+)
 # Use the Widgets module from Qt 5
 target_link_libraries(q_example Qt5::Widgets)
 target_include_directories(q_example PUBLIC ${q_example_HDRS})
